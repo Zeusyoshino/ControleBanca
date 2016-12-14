@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IF Banca</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrap/css/datepicker3.css" rel="stylesheet">
+<link href="bootstrap/css/styles.css" rel="stylesheet">
+
+<!--Icons-->
+<script src="bootstrap/js/lumino.glyphs.js"></script>
+
+<!--[if lt IE 9]>
+<script src="bootstrapjs/html5shiv.js"></script>
+<script src="bootstrap/js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				
+				<a class="navbar-brand" href="home.html"><span>IF</span>Banca</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="paginas/editperfil.html"><svg class="glyph stroked male-user"><use xlink:href="altuser.jsp"></use></svg> Editar perfil </a></li>
+							<li><a href="paginas/Logout.html"><svg class="glyph stroked cancel"><use xlink:href="logout.jsp"></use></svg> Sair </a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li><a href="paginas/caduser.jsp"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar usuário</a></li>
+                        <li>
+                           <form name="ListarUsuario" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.ListarUsuario.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de usuários </a></li>
+                                    <input type="hidden" name="tarefa" value="ListaUsuario"> 
+                            </ul>
+                            </form>
+                        </li>
+                        <li><a href="paginas/altuser.jsp"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Alterar usuário</a></li>
+                        <li><a href="paginas/deluser.html"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg> Desativar usuário </a></li>
+                        <li><a href="paginas/cadbanca.jsp"><svg class="glyph stroked calendar blank"><use xlink:href="#stroked-calendar-blank"></use></svg> Cadastrar banca</a></li>
+                        <li>
+                            <form name="frmListarUsuario" method="POST" action="Executa">
+                                <ul class="nav menu">
+                                    <li><a href="javascript:document.frmListarUsuario.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de bancas </a></li>
+                                </ul>
+                            </form>
+                        </li>
+                        <li><a href="altbanca.html"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Alterar banca </a></li>
+                        <li><a href="delbanca.html"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg> Deletar banca </a></li>
+                </ul>
+
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="home.html"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Home</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+                    
+                   
+				<div class="col-xs-12 col-md-6 col-lg-8">
+					<div class="panel panel-default chat">
+					<div class="panel-heading" id="accordion"><svg class="glyph stroked two-messages"><use xlink:href="#stroked-two-messages"></use></svg>Últimas novidades </div>
+				
+					<div class="panel-body">
+						<ul>
+							<li class="left clearfix">
+								<span class="chat-img pull-left">
+									<img src="paginas/img/femaleuser.png" alt="User Avatar" class="img-circle" />
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header">
+										<strong class="primary-font">Convidado 1</strong> 
+									</div>
+									<p>
+										O Convidado 1 já confirmou presença!
+									</p>
+								</div>
+							</li>
+							<li class="right clearfix">
+								<span class="chat-img pull-right">
+									<img src="paginas/img/maleuser.png" alt="User Avatar" class="img-circle" />
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header">
+										<strong class="pull-left primary-font">Convidado 2</strong>
+									</div>
+									<p>
+										<br>O convidado 2 ainda não confimou presença.
+									</p>
+								</div>
+							</li>
+							<li class="left clearfix">
+								<span class="chat-img pull-left">
+									<img src="paginas/img/femaleuser.png" alt="User Avatar" class="img-circle" />
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header">
+										<strong class="primary-font">Convidado 3</strong>
+									</div>
+									<p>
+										O convidado 3 confirmou que não poderá participar da banca.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="panel-footer">
+						
+					</div>
+				</div>
+				
+			</div><!--/.col-->
+              <div class="col-md-4">
+			
+				<div class="panel panel-green">
+					<div class="panel-heading dark-overlay"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg>Calendar</div>
+					<div class="panel-body">
+						<div id="calendar"></div>
+					</div>
+				</div>
+					
+			</div><!--/.col-->
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+
+	<script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/chart.min.js"></script>
+	<script src="bootstrap/js/chart-data.js"></script>
+	<script src="bootstrap/js/easypiechart.js"></script>
+	<script src="bootstrap/js/easypiechart-data.js"></script>
+	<script src="bootstrap/js/bootstrap-datepicker.js"></script>
+	<script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>
+
