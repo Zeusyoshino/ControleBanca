@@ -9,6 +9,7 @@ import BEAN.Usuario;
 import DAO.UsuarioDAO;
 import SERVLET.Tarefa;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +23,7 @@ public class ListaUsuario implements Tarefa{
     
     
     public String executa(HttpServletRequest req, HttpServletResponse resp) {
-        Collection<Usuario> usuarios = null;
+        ArrayList<Usuario> usuarios = new ArrayList();
         try {
             usuarios = new UsuarioDAO().buscaSimilar();
         } catch (ClassNotFoundException ex) {

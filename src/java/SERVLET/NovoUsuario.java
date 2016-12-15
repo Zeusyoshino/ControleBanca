@@ -21,7 +21,7 @@ public class NovoUsuario implements Tarefa {
 
     
     public String executa(HttpServletRequest req, HttpServletResponse resp) {
-        Usuario usuario = new Usuario(req.getParameter("usuario"));
+        /*Usuario usuario = new Usuario(req.getParameter("usuario"));
         try {
             try {
                 new UsuarioDAO().adiciona(usuario);
@@ -32,7 +32,8 @@ public class NovoUsuario implements Tarefa {
             Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
         req.setAttribute("usuario", usuario);
-        return "/paginas/caduser.jsp";
+        return "/paginas/caduser.jsp";*/
+        return null;
     }
 
     

@@ -16,9 +16,9 @@ public class Usuario {
     private String senha;
     private String celular;
     private int nivelacesso;
-    private boolean status;
+    private int status;
 
-    public Usuario(int id, String nome, String email, String senha, String celular, int nivelacesso, Boolean status) {
+    public Usuario(int id, String nome, String email, String senha, String celular, int nivelacesso, int status) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -31,9 +31,18 @@ public class Usuario {
     public Usuario(String parameter) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public Usuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     public int getId() {
         return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getNome() {
@@ -76,7 +85,11 @@ public class Usuario {
         this.nivelacesso = nivelacesso;
     }
 
-    public boolean isStatus() {
+    public int getStatus() {
         return status;
+    }
+    
+    public void setStatus(int status) {
+        this.status = status;
     }
 }
