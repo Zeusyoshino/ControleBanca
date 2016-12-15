@@ -185,7 +185,7 @@
             
                 
 	</script>
-        <script src="js/validator.min.js"></script>
+        <script src="bootstrap/js/validator.min.js"></script>
         
 </body>
 

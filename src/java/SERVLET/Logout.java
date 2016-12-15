@@ -12,9 +12,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mylena
  */
-public interface Tarefa {
-    
-    String executa(HttpServletRequest req, HttpServletResponse resp);
-    
+public class Logout implements Tarefa {
+
+    @Override
+    public String executa(HttpServletRequest req, HttpServletResponse resp) {
+        req.getSession().removeAttribute("usuarioLogado");
+        return "/index.jsp";
+    }
     
 }

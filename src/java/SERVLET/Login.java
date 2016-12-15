@@ -41,19 +41,16 @@ public class Login implements Tarefa {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(usuario == null){
-            return "/WEB-INF/paginas/LoginInvalido.html";
+            return "/paginas/LoginInvalido.html";
         } else
         {
             HttpSession session = req.getSession();
             session.setAttribute("usuarioLogado", usuario);
-            return "/WEB-INF/paginas/home.html";
+            return "/paginas/home.html";
         }
     }
 
-    @Override
-    public Boolean verificaAtivado() {
-        return false;
-    }
+    
     
     
     

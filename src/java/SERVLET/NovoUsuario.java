@@ -32,14 +32,10 @@ public class NovoUsuario implements Tarefa {
             Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
         req.setAttribute("usuario", usuario);
-        return "/WEB-INF/paginas/NovoUsuario.jsp";
+        return "/paginas/caduser.jsp";
     }
 
-    @Override
-    public Boolean verificaAtivado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
     
    
 }

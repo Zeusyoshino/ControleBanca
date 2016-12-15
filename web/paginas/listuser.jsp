@@ -103,8 +103,25 @@
                                 <td><c:out value="${usuario.getNome()}"></c:out></td> 
                                 <td><c:out value="${usuario.getEmail()}"></c:out></td> 
                                 <td><c:out value="${usuario.getCelular()}"></c:out></td> 
-                                <td><c:out value="${usuario.getNivelAcesso}"></c:out></td> 
-                                <td><c:out value="${usuario.getStatus()}"></c:out></td> 
+                                <td>
+                                    <c:if test="${usuario.getNivelAcesso eq 1}">
+                                        
+                                    </c:if>
+                                    <c:if test="${usuario.getNivelAcesso eq 2}">
+                                        Desativado
+                                    </c:if>
+                                    <c:if test="${usuario.getNivelAcesso eq 3}">
+                                        Desativado
+                                    </c:if>    
+                                </td> 
+                                <td>
+                                    <c:if test="${usuario.getStatus eq 1}">
+                                        Ativo
+                                    </c:if>
+                                    <c:if test="${usuario.getStatus eq 0}">
+                                        Desativado
+                                    </c:if>
+                                </td> 
                             </tr>
                         </c:forEach>
                     </tbody>

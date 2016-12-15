@@ -44,11 +44,10 @@ public class UsuarioDAO {
         return null;
     }
     
-    public Collection<Usuario> buscaSimilar(String filtro) throws SQLException {
+    public Collection<Usuario> buscaSimilar() throws SQLException {
         List<Usuario> similares = new ArrayList<>();
-        PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM usuário");
-        
-        
+        PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM usuario");
+
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
             int id = rs.getInt("usua_id");

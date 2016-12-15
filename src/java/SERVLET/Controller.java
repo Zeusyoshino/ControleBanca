@@ -41,18 +41,10 @@ public class Controller extends HttpServlet {
                 Class<?> tipo = Class.forName(tarefa);
                 Tarefa instancia = (Tarefa) tipo.newInstance();
 
-                Filtro filtro = new Filtro();
-                Boolean continua = filtro.verificaAtivado(req, resp, null, instancia);
-
-                if(continua.equals(true)){
-                    String pagina = instancia.executa(req, resp);
-                    this.redireciona(pagina, req, resp);
-                }
-                else
-                {
-                    String pagina = "/WEB-INF/paginas/NaoAutorizado.jsp";
-                    this.redireciona(pagina, req, resp);
-                }
+                
+                String pagina = instancia.executa(req, resp);
+                this.redireciona(pagina, req, resp);
+                
 
             } catch (ClassNotFoundException | InstantiationException | 
                     IllegalAccessException | ServletException | IOException e) {

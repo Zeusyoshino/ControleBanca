@@ -7,6 +7,7 @@ package SERVLET;
 
 import BEAN.Usuario;
 import DAO.UsuarioDAO;
+import SERVLET.Tarefa;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.logging.Level;
@@ -17,21 +18,20 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mylena
  */
-public class ListaUsuario {
+public class ListaUsuario implements Tarefa{
     
     
     public String executa(HttpServletRequest req, HttpServletResponse resp) {
-        String filtro = req.getParameter("filtro");
         Collection<Usuario> usuarios = null;
         try {
-            usuarios = new UsuarioDAO().buscaSimilar(filtro);
+            usuarios = new UsuarioDAO().buscaSimilar();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ListaUsuario.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(ListaUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
         req.setAttribute("usuario", usuarios);
-        return "/WEB-INF/paginas/listuser.jsp";
+        return "/paginas/listuser.jsp";
     }
 
     

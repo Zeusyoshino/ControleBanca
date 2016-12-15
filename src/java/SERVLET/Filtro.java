@@ -43,28 +43,7 @@ public class Filtro implements Filter {
     }
 
 
-    public Boolean verificaAtivado(ServletRequest request, ServletResponse response, FilterChain chain, Tarefa objeto) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse resp = (HttpServletResponse) response;
-        Usuario usuario =  getUsuario(req);
-        if (usuario == null){
-            if (objeto.verificaAtivado().equals(false))
-            {
-                return true;
-            }
-        }
-        
-        /*if(usuario.isStatus().equals(true)){
-                return true;
-        }
-        else
-        {
-            if(objeto.verificaAtivado().equals(false)){
-                return true;
-            }
-        }*/
-        return false;
-    }
+    
     
     private Usuario getUsuario(HttpServletRequest req) {
         Usuario usuario = (Usuario) req.getSession().getAttribute("usuarioLogado");

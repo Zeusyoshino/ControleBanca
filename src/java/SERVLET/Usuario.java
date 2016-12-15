@@ -18,17 +18,15 @@ public class Usuario implements Tarefa {
     public String executa(HttpServletRequest req, HttpServletResponse resp) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     } 
-  
-    @Override
-    public Boolean verificaAtivado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public String novoUsuario(HttpServletRequest req, HttpServletResponse resp){
         System.out.println("chamou o método");
-        return "/WEB-INF/paginas/caduser.jsp";
+        return "/paginas/caduser.jsp";
     }
 
-   
+    public String ListaUsuario(HttpServletRequest req, HttpServletResponse resp){
+        System.out.println("chamou o método");
+        return "/paginas/listuser.jsp";
+    }
         
 }
