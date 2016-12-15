@@ -46,7 +46,14 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li><a href="caduser.jsp"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar usuário</a></li>
+			<li>
+                           <form name="teste" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.teste.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de usuários </a></li>
+                                    <input type="hidden" name="tarefa" value="NovoUsuario"> 
+                            </ul>
+                            </form>
+                        </li>
                         <li>
                            <form name="ListarUsuario" method="POST" action="Executa">
                             <ul class="nav menu">

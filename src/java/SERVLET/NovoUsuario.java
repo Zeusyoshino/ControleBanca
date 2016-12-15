@@ -21,19 +21,18 @@ public class NovoUsuario implements Tarefa {
 
     
     public String executa(HttpServletRequest req, HttpServletResponse resp) {
-        /*Usuario usuario = new Usuario(req.getParameter("usuario"));
-        try {
-            try {
-                new UsuarioDAO().adiciona(usuario);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Usuario usuario = new Usuario(req.getParameter("usuario"));
+//        try {
+//            try {
+//                new UsuarioDAO().adiciona(usuario);
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(NovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         req.setAttribute("usuario", usuario);
-        return "/paginas/caduser.jsp";*/
-        return null;
+        return "/paginas/caduser.jsp";
     }
 
     

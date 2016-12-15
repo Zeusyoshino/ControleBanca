@@ -31,7 +31,7 @@ public class ListaUsuario implements Tarefa{
         } catch (SQLException ex) {
             Logger.getLogger(ListaUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-        req.setAttribute("usuario", usuarios);
+        req.setAttribute("usuarios", usuarios);
         return "/paginas/listuser.jsp";
     }
 
