@@ -90,13 +90,13 @@
             <div class="row">
                 <ol class="breadcrumb">
                     <li><a href="home.html"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-                    <li class="active">Lista de usuários</li>
+                    <li class="active">Lista de bancas</li>
                 </ol>
             </div><!--/.row-->
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Lista de usuários</h1>
+                    <h1 class="page-header">Lista de bancas</h1>
                 </div>
             </div><!--/.row-->
 
@@ -111,23 +111,25 @@
                                 <table class="table"> 
                     <thead> 
                     <tr> 
-                        <th>Curso</th> 
                         <th>Tema</th> 
+                        <th>Curso</th> 
                         <th>Data</th>
+                        <th>Hora</th>
                         <th colspan="2"></th>
                     </tr> 
                     </thead> 
                     <tbody>
-                        <c:forEach var="usuario" items='${usuarios}'>
+                        <c:forEach var="banca" items='${bancas}'>
                             <tr> 
-                                <td><c:out value="${usuario.getNome()}"></c:out></td> 
-                                <td><c:out value="${usuario.getEmail()}"></c:out></td> 
-                                <td><c:out value="${usuario.getCelular()}"></c:out></td> 
+                                <td><c:out value="${banca.getTema()}"></c:out></td> 
+                                <td><c:out value="${banca.getCurso()}"></c:out></td> 
+                                <td><c:out value="${banca.getData()}"></c:out></td> 
+                                <td><c:out value="${banca.getHora()}"></c:out></td> 
                                 <td>
-                                    <a href="Executa?tarefa=BuscaUsuario&AMP;id=${usuario.id}" class="btn btn-sm btn-info">Alterar</a>
+                                    <!--<a href="Executa?tarefa=BuscaUsuario&AMP;id=${usuario.id}" class="btn btn-sm btn-info">Alterar</a>-->
                                 </td>
                                 <td>
-                                    <a href="Executa?tarefa=DeletaUsuario&AMP;id=${usuario.id}" class="btn btn-sm btn-danger">Excluir</a>
+                                    <!--<a href="Executa?tarefa=DeletaUsuario&AMP;id=${usuario.id}" class="btn btn-sm btn-danger">Excluir</a>-->
                                 </td>
                                 
                             </tr>

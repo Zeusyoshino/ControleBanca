@@ -49,9 +49,42 @@
 				<input type="text" class="form-control" placeholder="Buscar">
 			</div>
 		</form>
-		
+		<ul class="nav menu">
+			<li>
+                           <form name="CadastrarUsuario" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.CadastrarUsuario.submit()"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar usuário</a></li>
+                                    <input type="hidden" name="tarefa" value="NovoUsuario"> 
+                            </ul>
+                            </form>
+                        </li>
+                        <li>
+                            <form name="ListarUsuario" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.ListarUsuario.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de usuários </a></li>
+                                    <input type="hidden" name="tarefa" value="ListaUsuario"> 
+                            </ul>
+                            </form>
+                        </li>
+                            <form name="CadastrarBanca" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.CadastrarBanca.submit()"><svg class="glyph stroked calendar blank"><use xlink:href="#stroked-calendar-blank"></use></svg> Cadastrar banca</a></li>
+                                    <input type="hidden" name="tarefa" value="NovaBanca"> 
+                            </ul>
+                            </form>
+                        <li>
+                            <form name="ListarBanca" method="POST" action="Executa">
+                                <ul class="nav menu">
+                                    <li><a href="javascript:document.ListarBanca.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de bancas </a></li>
+                                    <input type="hidden" name="tarefa" value="ListaBanca"> 
+                                </ul>
+                            </form>
+                        </li>
+                       </ul>
 
 	</div><!--/.sidebar-->
+
+	
 		
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">

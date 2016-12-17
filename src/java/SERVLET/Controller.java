@@ -63,7 +63,6 @@ public class Controller extends HttpServlet {
     }
 
     private void redireciona(String pagina, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("´\n\n Página: " + pagina + "\n\n");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher(pagina);
         requestDispatcher.forward(req, resp);
     }

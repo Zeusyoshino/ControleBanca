@@ -80,13 +80,7 @@ public class UsuarioDAO {
                     rs.getString("usua_celular"), 
                     rs.getInt("usua_na"), 
                     rs.getInt("usua_status"));
-//            obj.setId(rs.getInt("usua_id"));
-//            obj.setNome(rs.getString("usua_nome"));
-//            obj.setEmail(rs.getString("usua_email"));
-//            obj.setSenha(rs.getString("usua_senha"));
-//            obj.setCelular(rs.getString("usua_celular"));
-//            obj.setNivelacesso(rs.getInt("usua_na"));
-//            obj.setStatus(rs.getInt("usua_status"));
+
 
             similares.add(obj);
         }
@@ -95,18 +89,6 @@ public class UsuarioDAO {
         return similares;
     }
 
-    public static void adiciona(Usuario usuario) throws SQLException {
-        String sql = "insert into usuario (usua_nome, usua_email, usua_senha, usua_celular, usua_na, usua_status) values (?,?,?,?,?,?,1)";
-        System.out.println("O sql é " + sql);
-        PreparedStatement stmt = connection.prepareStatement(sql);
-        stmt.setString(1, usuario.getNome());
-        stmt.setString(2, usuario.getEmail());
-        stmt.setString(3, usuario.getSenha());
-        stmt.setString(4, usuario.getCelular());
-        stmt.setInt(5, usuario.getNivelacesso());
-        stmt.execute();
-        stmt.close();
-    }
 
     public boolean Cadastro(Usuario usuario) throws SQLException {
         boolean salvo = false;

@@ -47,34 +47,36 @@
 		</form>
 		<ul class="nav menu">
 			<li>
-                           <form name="teste" method="POST" action="Executa">
+                           <form name="CadastrarUsuario" method="POST" action="Executa">
                             <ul class="nav menu">
-                                    <li><a href="javascript:document.teste.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de usuários </a></li>
+                                    <li><a href="javascript:document.CadastrarUsuario.submit()"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar usuário</a></li>
                                     <input type="hidden" name="tarefa" value="NovoUsuario"> 
                             </ul>
                             </form>
                         </li>
                         <li>
-                           <form name="ListarUsuario" method="POST" action="Executa">
+                            <form name="ListarUsuario" method="POST" action="Executa">
                             <ul class="nav menu">
                                     <li><a href="javascript:document.ListarUsuario.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de usuários </a></li>
                                     <input type="hidden" name="tarefa" value="ListaUsuario"> 
                             </ul>
                             </form>
                         </li>
-                        <li><a href="altuser.jsp"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Alterar usuário</a></li>
-                        <li><a href="deluser.jsp"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg> Desativar usuário </a></li>
-                        <li><a href="cadbanca.jsp"><svg class="glyph stroked calendar blank"><use xlink:href="#stroked-calendar-blank"></use></svg> Cadastrar banca</a></li>
+                            <form name="CadastrarBanca" method="POST" action="Executa">
+                            <ul class="nav menu">
+                                    <li><a href="javascript:document.CadastrarBanca.submit()"><svg class="glyph stroked calendar blank"><use xlink:href="#stroked-calendar-blank"></use></svg> Cadastrar banca</a></li>
+                                    <input type="hidden" name="tarefa" value="NovaBanca"> 
+                            </ul>
+                            </form>
                         <li>
-                            <form name="frmListarUsuario" method="POST" action="Executa">
+                            <form name="ListarBanca" method="POST" action="Executa">
                                 <ul class="nav menu">
-                                    <li><a href="javascript:document.frmListarUsuario.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de bancas </a></li>
+                                    <li><a href="javascript:document.ListarBanca.submit()"><svg class="glyph stroked notepad"><use xlink:href="#stroked-notepad"></use></svg> Lista de bancas </a></li>
+                                    <input type="hidden" name="tarefa" value="ListaBanca"> 
                                 </ul>
                             </form>
                         </li>
-                        <li><a href="altbanca.html"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Alterar banca </a></li>
-                        <li><a href="delbanca.html"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"/></svg> Deletar banca </a></li>
-                </ul>
+                       </ul>
 
 	</div><!--/.sidebar-->
 		

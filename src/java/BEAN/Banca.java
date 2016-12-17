@@ -5,10 +5,82 @@
  */
 package BEAN;
 
+import java.sql.Time;
+import java.util.Date;
+
 /**
  *
  * @author Mylena
  */
 public class Banca {
+    private int id;
+    private Date data;
+    private Time hora;
+    private String resumo;
+    private String tema;
+    private String curso;
+
+    
+    public int getId() {
+        return id;
+    }
+
+    
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
+    public Date getData() {
+        return data;
+    }
+
+    
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    
+    public Time getHora() {
+        return hora;
+    }
+
+    
+    public void setHora(Time hora) {
+        this.hora = hora;
+    }
+
+    
+    public String getResumo() {
+        return resumo;
+    }
+
+    
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+
+    
+    public String getTema() {
+        return tema;
+    }
+
+    
+    public void setTema(String tema) {
+        this.tema = tema;
+    }
+
+    
+    public String getCurso() {
+        return curso;
+    }
+
+    
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+    
+          
+            
     
 }
