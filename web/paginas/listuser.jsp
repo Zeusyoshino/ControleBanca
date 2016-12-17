@@ -93,6 +93,7 @@
                         <th>Nome</th> 
                         <th>Email</th> 
                         <th>Celular</th>
+                        <th></th>
                     </tr> 
                     </thead> 
                     <tbody>
@@ -101,7 +102,9 @@
                                 <td><c:out value="${usuario.getNome()}"></c:out></td> 
                                 <td><c:out value="${usuario.getEmail()}"></c:out></td> 
                                 <td><c:out value="${usuario.getCelular()}"></c:out></td> 
-                                
+                                <td>
+                                    <a href="Executa?tarefa=DeletaUsuario&AMP;id=${usuario.id}" class="btn btn-sm btn-danger">Excluir</a>
+                                </td>
                                 
                             </tr>
                         </c:forEach>

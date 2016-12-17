@@ -73,7 +73,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="col-md-12">
-                                                    <form data-toggle="validator" role="form" action="Executa" method="POST">
+                                                    <form data-toggle="validator" role="form" name="SalvaUsuario" action="Executa" method="POST">
                                                             
 								<div class="form-group">
 									<label>Nome</label>
@@ -123,8 +123,8 @@
                                                                         </select>
                                                                 </div> 
                                                             
+                                                                <input type="hidden" name="tarefa" value="SalvaUsuario"> 
 								<button type="submit" class="btn btn-primary">Enviar</button>
-                                                                <input type="hidden" name="tarefa" value="NovoUsuario"> 
                                                                 
 							</div>
 						</form>

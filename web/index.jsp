@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 14/12/2016, 12:50:26
-    Author     : Mylena
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
