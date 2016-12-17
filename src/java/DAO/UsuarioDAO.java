@@ -66,6 +66,34 @@ public class UsuarioDAO {
         stmt.close();
         return similares;
     }
+    
+    public ArrayList<Usuario> buscaUsuario(int idUsu) throws SQLException {
+        ArrayList<Usuario> similares = new ArrayList<Usuario>();
+        PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM usuario WHERE usua_id = " + idUsu);
+
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            Usuario obj = new Usuario(rs.getInt("usua_id"), 
+                    rs.getString("usua_nome"), 
+                    rs.getString("usua_email"), 
+                    rs.getString("usua_senha"), 
+                    rs.getString("usua_celular"), 
+                    rs.getInt("usua_na"), 
+                    rs.getInt("usua_status"));
+//            obj.setId(rs.getInt("usua_id"));
+//            obj.setNome(rs.getString("usua_nome"));
+//            obj.setEmail(rs.getString("usua_email"));
+//            obj.setSenha(rs.getString("usua_senha"));
+//            obj.setCelular(rs.getString("usua_celular"));
+//            obj.setNivelacesso(rs.getInt("usua_na"));
+//            obj.setStatus(rs.getInt("usua_status"));
+
+            similares.add(obj);
+        }
+        rs.close();
+        stmt.close();
+        return similares;
+    }
 
     public static void adiciona(Usuario usuario) throws SQLException {
         String sql = "insert into usuario (usua_nome, usua_email, usua_senha, usua_celular, usua_na, usua_status) values (?,?,?,?,?,?,1)";
@@ -92,6 +120,35 @@ public class UsuarioDAO {
         ps.setString(4, usuario.getCelular());
         ps.setInt(5, usuario.getNivelacesso());
         ps.setInt(6, usuario.getStatus());
+
+        if (ps.executeUpdate() > 0) {
+            salvo = true;
+        }
+        return salvo;
+    }
+    
+    public boolean edita(Usuario usuario) throws SQLException {
+        boolean salvo = false;
+        
+        usuario.setStatus(1);
+        
+        String sql = "UPDATE usuario "
+                + "SET usua_nome = ?, "
+                + "usua_email = ?, "
+                + "usua_senha = ?, "
+                + "usua_celular = ?, "
+                + "usua_na = ? "
+                + "WHERE usua_id = ?;";
+        
+        PreparedStatement ps = this.connection.prepareStatement(sql);
+        ps.setString(1, usuario.getNome());
+        ps.setString(2, usuario.getEmail());
+        ps.setString(3, usuario.getSenha());
+        ps.setString(4, usuario.getCelular());
+        ps.setInt(5, usuario.getNivelacesso());
+        ps.setInt(6, usuario.getId());
+        
+        System.out.println("\n\n Z> " + ps);
 
         if (ps.executeUpdate() > 0) {
             salvo = true;
