@@ -29,12 +29,13 @@ public class SalvaUsuario implements Tarefa {
             UsuarioDAO dao = new UsuarioDAO();
             if (dao.Cadastro(usu)) { //verifica se foi cadastrado com sucesso
                 req.setAttribute("usuario", usu); //cria um atributo para a saída de sucesso
+                
             } else {
                 System.out.println(">>>>> deu ruim");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return "/paginas/listuser.jsp";
+        return "/paginas/caduser.jsp";
     }
 }

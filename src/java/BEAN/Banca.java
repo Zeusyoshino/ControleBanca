@@ -20,6 +20,14 @@ public class Banca {
     private String tema;
     private String curso;
 
+    public Banca(int id, java.sql.Date data, Time hora, String resumo, String tema, String curso) {
+       
+    }
+
+    public Banca() {
+
+    }
+
     
     public int getId() {
         return id;

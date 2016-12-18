@@ -129,8 +129,6 @@ public class UsuarioDAO {
         ps.setString(4, usuario.getCelular());
         ps.setInt(5, usuario.getNivelacesso());
         ps.setInt(6, usuario.getId());
-        
-        System.out.println("\n\n Z> " + ps);
 
         if (ps.executeUpdate() > 0) {
             salvo = true;

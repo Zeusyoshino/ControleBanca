@@ -167,18 +167,6 @@
 
                                     <button type="submit" class="btn btn-primary">Enviar</button>
                                     <input type="hidden" name="tarefa" value="SalvaBanca"> 
-                                    
-                                    <c:if teste="${sucesso ne null}">
-                                        <div class="alert bg-sucess" role="sucess">
-                                            <center>Cadastro feito com sucesso!</center>
-                                        </div>
-                                    </c:if>
-                                    <c:if teste="${fail ne null}">
-                                        <div class="alert bg-danger" role="alert">
-                                            <center>Não foi possível cadastrar!</center>
-                                        </div>
-                                    </c:if>
-                                    
 
                                 </form>
 

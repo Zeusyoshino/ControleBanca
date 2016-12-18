@@ -67,4 +67,51 @@ public class BancaDAO {
         }
         return salvo;
     }
+        
+    public ArrayList<Banca> buscaBanca(int idBanca) throws SQLException {
+        ArrayList<Banca> similares = new ArrayList<Banca>();
+        PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM banca WHERE banc_id = " + idBanca);
+
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            Banca obj = new Banca(rs.getInt("banc_id"), 
+                    rs.getDate("banc_data"), 
+                    rs.getTime("banc_hora"), 
+                    rs.getString("banc_tema"), 
+                    rs.getString("banc_resumo"), 
+                    rs.getString("banc_curso"));
+                    
+
+
+            similares.add(obj);
+        }
+        rs.close();
+        stmt.close();
+        return similares;
+    }
+    
+//     public boolean edita(Banca banca) throws SQLException {
+//        boolean salvo = false; 
+//        
+//        String sql = "UPDATE banca "
+//                + "SET banc_tema = ?, "
+//                + "banc_data = ?, "
+//                + "banc_hora = ?, "
+//                + "banc_resumo = ?, "
+//                + "banc_curso = ? "
+//                + "WHERE banc_id = ?;";
+//        
+//        PreparedStatement ps = this.connection.prepareStatement(sql);
+//        ps.setString(1, banca.getTema());
+//        ps.setDate(2, new java.sql.Date(banca.getData().getTime()));
+//        ps.setTime(3,  new java.sql.Time(Long.parseLong(banca.getHora())));
+//        ps.setString(4, banca.getResumo());
+//        ps.setString(5, banca.getCurso());
+//        ps.setInt(6, banca.getId());
+//
+//        if (ps.executeUpdate() > 0) {
+//            salvo = true;
+//        }
+//        return salvo;
+//    }
 }

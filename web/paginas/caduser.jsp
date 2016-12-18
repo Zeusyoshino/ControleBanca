@@ -149,7 +149,7 @@
                                                                 <div class="form-group">
                                                                         <label>Nível de acesso:</label>
                                                                         <select class="form-control" name="nivel">
-                                                                            <option>Selecione o nível</option>
+                                                                            <option value="0">Selecione o nível</option>
                                                                             <option value="1">Admin</option>
                                                                             <option value="2">Orientador</option>
                                                                             <option value="3">Convidado</option>
@@ -158,9 +158,19 @@
                                                             
                                                                 <input type="hidden" name="tarefa" value="SalvaUsuario"> 
 								<button type="submit" class="btn btn-primary">Enviar</button>
-                                                                
+                                                                <c:if teste="${sucesso ne null}">
+                                                                    
 							</div>
 						</form>
+                                                                <div class="alert bg-sucess" role="sucess">
+                                                                        <center>Cadastro feito com sucesso!</center>
+                                                                    </div>
+                                                                </c:if>
+                                                                <c:if teste="${fail ne null}">
+                                                                    <div class="alert bg-danger" role="alert">
+                                                                        <center>Não foi possível cadastrar!</center>
+                                                                    </div>
+                                                                </c:if>
                                                     
 					</div>
 				</div>
