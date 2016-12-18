@@ -36,6 +36,6 @@ public class SalvaUsuario implements Tarefa {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return "/paginas/caduser.jsp";
+        return "/paginas/Executa";
     }
 }

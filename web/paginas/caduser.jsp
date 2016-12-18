@@ -158,21 +158,23 @@
                                                             
                                                                 <input type="hidden" name="tarefa" value="SalvaUsuario"> 
 								<button type="submit" class="btn btn-primary">Enviar</button>
-                                                                <c:if teste="${sucesso ne null}">
+                                                                
                                                                     
 							</div>
 						</form>
-                                                                <div class="alert bg-sucess" role="sucess">
+                                                               
+                                                    
+					</div> 
+                                                                   <c:if teste="${usuario ne null}">
+                                                                <div class="alert bg-success" role="success">
                                                                         <center>Cadastro feito com sucesso!</center>
                                                                     </div>
                                                                 </c:if>
-                                                                <c:if teste="${fail ne null}">
+                                                                <c:if teste="${usuario eq null}">
                                                                     <div class="alert bg-danger" role="alert">
                                                                         <center>Não foi possível cadastrar!</center>
                                                                     </div>
                                                                 </c:if>
-                                                    
-					</div>
 				</div>
 			</div><!-- /.col-->
 		</div><!-- /.row -->
